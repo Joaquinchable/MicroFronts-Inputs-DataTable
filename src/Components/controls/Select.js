@@ -14,11 +14,11 @@ const SelectAtom = (props) => {
       <MuiSelect label={label} name={name} value={value} onChange={onChange}>
         <MenuItem value="">None</MenuItem>
 
-        {options.map((item) => (
-          <MenuItem key={item.id} value={item.id}>
-            {item.title}{" "}
-          </MenuItem>
-        ))}
+        {
+          options.map(
+           item => (<MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>)
+                    )
+        }
       </MuiSelect>
     </FormControl>
   );
